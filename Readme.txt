@@ -7,3 +7,6 @@
     - SASS Media queries
     - Autoprefixer
     - Live Reload
+
+Запуск:
+npm i => gulp
