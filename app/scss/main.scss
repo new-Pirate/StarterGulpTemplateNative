@@ -1,0 +1,19 @@
+@import "vars";
+@import "fonts";
+@import "libs";
+@import "media"; // Always at the end
+
+
+
+
+.wrapper{
+    width: 500px;
+      @include respondMax(mdFrom) {
+        .sidebar {
+          width: 100px;
+        }
+      }
+
+}
+
+
