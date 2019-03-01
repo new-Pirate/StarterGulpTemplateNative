@@ -1,5 +1,3 @@
-$(function() {
+$(function() {      //Для интеграции JQuerry
 
-
-    
 });
