@@ -6,7 +6,7 @@ let gulp          = require('gulp'),
 	rename        = require('gulp-rename'),
 	autoprefixer  = require('gulp-autoprefixer'),
 	notify        = require('gulp-notify'),
-	rsync = require('gulp-rsync');
+	rsync 		  = require('gulp-rsync');
 
 gulp.task('browser-sync', function() {
 	browserSync({
