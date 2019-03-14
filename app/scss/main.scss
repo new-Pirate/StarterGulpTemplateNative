@@ -6,8 +6,23 @@
 
 .wrapper {
     width: 500px;
+    text-align: center;
+    margin: 0 auto;
+
     @include respondMin(lgTo) {
         width: 100px;
         color: red;
+    }
+}
+
+.slider {
+    width: 1200px;
+    margin: 0 auto;
+    border: 1px solid red;
+
+    .slide {
+        background: #007ACC;
+        text-align: center;
+        height: 300px;
     }
 }
