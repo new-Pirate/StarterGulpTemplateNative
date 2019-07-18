@@ -18,11 +18,72 @@
 .slider {
     width: 1200px;
     margin: 0 auto;
-    border: 1px solid red;
+    border: 1px solid green;
 
     .slide {
         background: #007ACC;
         text-align: center;
         height: 300px;
     }
+}
+
+body {
+	text-align: center;
+	padding: 10px;
+}
+
+.form {
+	display: inline-block;
+	padding: 25px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+    width: 500px;
+    margin-top: 20px;
+}
+
+.form__field {
+	margin-bottom: 10px;
+}
+
+.form__error {
+	color: red;
+	text-align: left;
+	font-size: 12px;
+	display: block;
+	margin-top: 3px;
+	display: none;
+}
+
+.form input {
+	outline: none;
+	display: block;
+	width: 100%;
+	border-radius: 2px;
+	border: 1px solid #ccc;
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+.form button {
+	width: 100%;
+	padding: 10px;
+	border-radius: 2px;
+	border: 0;
+	background-color: #ccc;
+	color: #fff;
+}
+
+.input__group:valid:not(:placeholder-shown) {
+	border-color: green;
+}
+
+.input__group:invalid:not(:placeholder-shown) {
+	border-color: red;
+}
+.input__group:invalid:not(:placeholder-shown) + .form__error {
+	display: block;
+}
+
+.input__file:valid:not(:placeholder-shown) {
+	border-color: green;
 }
