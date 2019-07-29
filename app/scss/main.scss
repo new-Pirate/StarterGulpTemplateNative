@@ -11,7 +11,7 @@
 
     @include respondMin(lgTo) {
         width: 100px;
-        color: red;
+				color: red;
     }
 }
 
@@ -37,8 +37,8 @@ body {
 	padding: 25px;
 	border: 1px solid #ccc;
 	border-radius: 5px;
-    width: 500px;
-    margin-top: 20px;
+  width: 500px;
+  margin-top: 20px;
 }
 
 .form__field {
@@ -73,17 +73,10 @@ body {
 	color: #fff;
 }
 
-.input__group:valid:not(:placeholder-shown) {
-	border-color: green;
+.error {
+	color: red;
 }
 
-.input__group:invalid:not(:placeholder-shown) {
-	border-color: red;
-}
-.input__group:invalid:not(:placeholder-shown) + .form__error {
-	display: block;
-}
-
-.input__file:valid:not(:placeholder-shown) {
-	border-color: green;
+input.error {
+	border: 1px solid red;
 }

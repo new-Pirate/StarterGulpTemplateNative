@@ -46,34 +46,30 @@
 		</div>
 	</div>
 
-	<form action="#" class="form">
+	<form action="#" class="form" id="form">
 		<div class="form__field">
-			<input class="input__group" type="text" placeholder="Имя" required />
-			<span class="form__error">Это поле должно содержать Имя в формате Alex</span>
+			<input class="input__group" name="name" type="text" placeholder="Имя" />
 		</div>
 		<div class="form__field">
-			<input class="input__group" type="email" placeholder="E-Mail"  required/>
-			<span class="form__error">Это поле должно содержать E-Mail в формате example123@site.com</span>
+			<input class="input__group left" name="email" type="email" placeholder="E-Mail" required/>
 		</div>
 		<div class="form__field">
-			<input class="input__group" type="tel" placeholder="Телефон" id="phone" pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" required/>
-			<span class="form__error">Это поле должно содержать телефон в формате +7 (123) 456-78-90</span>
+			<input class="input__group" name="tel" type="tel" placeholder="Телефон" id="phone" pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" />
 		</div>
 		<div class="form__field">
-			<input class="input__group" type="number" id="growth" placeholder="Ваш рост (см)" min="50" max="250" required/>
-			<span class="form__error">Ваш рост должен быть не меньше 50 и не больше 250 см</span>
+			<input class="input__group" name="number" type="number" id="growth" placeholder="Ваш рост (см)" min="50" max="250" />
 		</div>
 		<div class="form__field">
-			<input class="input__group" type="password" placeholder="Пароль" minlength="6" required/>
-			<span class="form__error">Количество символов должно быть больше 6</span>
+			<input class="input__group" name="password" type="password" id="password" placeholder="Пароль" minlength="6" />
 		</div>
 		<div class="form__field">
-			<input class="input__file" type="file" required/>
-			<span class="form__error">Выберети файл</span>
+			<input class="input__group" name="password_again" type="password" placeholder="Повторите пароль" minlength="6" />
 		</div>
 		<div class="form__field">
-			<input class="input__group" type="url" placeholder="Ваш сайт" required/>
-			<span class="form__error">Это поле должно содержать URL в формате http://mysite.ru</span>
+			<input class="input__file" name="file" type="file" />
+		</div>
+		<div class="form__field">
+			<input class="input__group" name="url" type="url" placeholder="Ваш сайт" />
 		</div>
 		<button type="submit">Отправить</button>
 	</form>
@@ -83,6 +79,7 @@
 	<script src="js/jquery.min.js"></script>
 	<script src="libs/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
 	<script src="libs/jQuery-Mask-Plugin-master/dist/jquery.mask.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.js"></script>
 	<script src="js/scripts.min.js"></script>
 </body>
 
