@@ -46,40 +46,23 @@
 		</div>
 	</div>
 
-	<form action="#" class="form" id="form">
-		<div class="form__field">
-			<input class="input__group" name="name" type="text" placeholder="Имя" />
+	<form class="form" novalidate>
+		<span>Please enter an email address:</span>
+		<div class="formGroupe">
+			<input type="email" id="email" name="email" required>
+			<span class="errorEmail"></span>
 		</div>
-		<div class="form__field">
-			<input class="input__group left" name="email" type="email" placeholder="E-Mail" required/>
+		<div class="formGroupe">
+			<input type="text" id="text" name="text" required>
+			<span class="errorText"></span>
 		</div>
-		<div class="form__field">
-			<input class="input__group" name="tel" type="tel" placeholder="Телефон" id="phone" pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" />
-		</div>
-		<div class="form__field">
-			<input class="input__group" name="number" type="number" id="growth" placeholder="Ваш рост (см)" min="50" max="250" />
-		</div>
-		<div class="form__field">
-			<input class="input__group" name="password" type="password" id="password" placeholder="Пароль" minlength="6" />
-		</div>
-		<div class="form__field">
-			<input class="input__group" name="password_again" type="password" placeholder="Повторите пароль" minlength="6" />
-		</div>
-		<div class="form__field">
-			<input class="input__file" name="file" type="file" />
-		</div>
-		<div class="form__field">
-			<input class="input__group" name="url" type="url" placeholder="Ваш сайт" />
-		</div>
-		<button type="submit">Отправить</button>
+		<button>Submit</button>
 	</form>
 
 	<!-- Custom HTML END -->
 
 	<script src="js/jquery.min.js"></script>
 	<script src="libs/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
-	<script src="libs/jQuery-Mask-Plugin-master/dist/jquery.mask.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.js"></script>
 	<script src="js/scripts.min.js"></script>
 </body>
 

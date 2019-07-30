@@ -5,78 +5,72 @@
 
 
 .wrapper {
-    width: 500px;
-    text-align: center;
-    margin: 0 auto;
+  width: 500px;
+  text-align: center;
+  margin: 0 auto;
 
-    @include respondMin(lgTo) {
-        width: 100px;
-				color: red;
-    }
+  @include respondMin(lgTo) {
+    width: 100px;
+    color: red;
+  }
 }
 
 .slider {
-    width: 1200px;
-    margin: 0 auto;
-    border: 1px solid green;
+  width: 1200px;
+  margin: 0 auto;
+  border: 1px solid green;
 
-    .slide {
-        background: #007ACC;
-        text-align: center;
-        height: 300px;
-    }
+  .slide {
+    background: #007ACC;
+    text-align: center;
+    height: 300px;
+  }
 }
 
+/* Форма */
+
 body {
-	text-align: center;
-	padding: 10px;
+  text-align: center;
+  padding: 10px;
 }
 
 .form {
-	display: inline-block;
-	padding: 25px;
-	border: 1px solid #ccc;
-	border-radius: 5px;
-  width: 500px;
-  margin-top: 20px;
+	margin: 30px auto;
+	width: 300px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
-.form__field {
-	margin-bottom: 10px;
-}
-
-.form__error {
-	color: red;
-	text-align: left;
-	font-size: 12px;
-	display: block;
-	margin-top: 3px;
-	display: none;
-}
-
-.form input {
+input{
+  border: 1px solid #333;
+	box-sizing: border-box;
 	outline: none;
 	display: block;
-	width: 100%;
-	border-radius: 2px;
-	border: 1px solid #ccc;
-	padding: 10px;
-	box-sizing: border-box;
 }
 
-.form button {
-	width: 100%;
-	padding: 10px;
-	border-radius: 2px;
-	border: 0;
-	background-color: #ccc;
-	color: #fff;
+.formGroupe {
+	margin: 5px 0;
+	text-align: left;
+}
+
+/* Это стиль для сообщений об ошибке */
+.errorEmail {
+  font-size: 80%;
+  color: red;
+  box-sizing: border-box;
+}
+
+.errorText {
+  font-size: 80%;
+  color: red;
+  box-sizing: border-box;
 }
 
 .error {
-	color: red;
+	border-color: red;
 }
 
-input.error {
-	border: 1px solid red;
+input:valid:not(:placeholder-shown) {
+  border-color: green;
 }
