@@ -17,13 +17,13 @@ $(document).ready(function () {
 	});
 
 	$('.prev').click(function () {
-		owl.trigger('prev.owl.carousel', [300]);
+		owl.trigger('prev.owl.carousel', [1000]);
 	});
 });
 
 /* Форма */
 
-const form = document.getElementsByClassName('form')[0];
+const form = document.getElementById('form');
 const email = document.getElementById('email');
 const text = document.getElementById('text');
 const errorEmail = document.querySelector('.errorEmail');
@@ -34,22 +34,20 @@ email.addEventListener("input", function (event) {
 	if (email.validity.valid) {
 		// В случае появления сообщения об ошибке, если поле является корректным, мы удаляем сообщение об ошибке.
 		errorEmail.innerHTML = ""; // Сбросить содержимое сообщения
-		errorEmail.className = "errorEmail"; // Сбросить визуальное состояние сообщения
 	} else {
-		errorEmail.innerHTML = "Поле e-mail обязательно";// Если поле невалидно, отображается пользовательское сообщение об ошибке. 
-		email.className = "error";
+		errorEmail.innerHTML = "Введите валидный e-mail";// Если поле невалидно, отображается пользовательское сообщение об ошибке. 
+		email.classList.add("error");
 	}
-}, false);
+});
 
 text.addEventListener("input", function (event) {
 	// Каждый раз, когда пользователь вводит что-либо, мы проверяем, является ли корректным поле текста.
 	if (text.validity.valid) {
 		// В случае появления сообщения об ошибке, если поле является корректным, мы удаляем сообщение об ошибке.
 		errorText.innerHTML = ""; // Сбросить содержимое сообщения
-		errorText.className = "errorText"; // Сбросить визуальное состояние сообщения
 	} else {
-		errorText.innerHTML = "Поле Text обязательно";// Если поле невалидно, отображается пользовательское сообщение об ошибке.
-		text.className = "error";
+		errorText.innerHTML = "Введите валидный Text";// Если поле невалидно, отображается пользовательское сообщение об ошибке.
+		text.classList.add("error");
 	}
 }, false);
 
@@ -57,15 +55,13 @@ form.addEventListener("submit", function (event) {
 	// Каждый раз, когда пользователь пытается отправить данные, мы проверяем валидность полей.
 	if (!email.validity.valid) {
 		errorEmail.innerHTML = "Поле e-mail обязательно";// Если поле невалидно, отображается пользовательское сообщение об ошибке. 
-		email.className = "error";
-		// И мы предотвращаем отправку формы путем отмены события
-		event.preventDefault();
+		email.classList.add("error");
+		event.preventDefault();// И мы предотвращаем отправку формы путем отмены события
 	}
 
 	if (!text.validity.valid) {
 		errorText.innerHTML = "Поле Text обязательно";// Если поле невалидно, отображается пользовательское сообщение об ошибке.
-		text.className = "error";
-		// И мы предотвращаем отправку формы путем отмены события
-		event.preventDefault();
+		text.classList.add("error");
+		event.preventDefault();// И мы предотвращаем отправку формы путем отмены события
 	}
-}, false);
+});
