@@ -19,7 +19,8 @@
 	<!-- Template Basic Images End -->
 
 	<link rel="stylesheet" href="libs/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css" />
-	<link rel="stylesheet" href="libs/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css"> <!-- удалить, если не нужны dots у карусели -->
+	<link rel="stylesheet" href="libs/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
+	<!-- удалить, если не нужны dots у карусели -->
 	<link rel="stylesheet" href="css/main.min.css">
 
 </head>
@@ -31,6 +32,8 @@
 	<div class="wrapper">
 		<h1>Hello World!!</h1>
 	</div>
+
+	<!-- Карусель -->
 
 	<div class="owl-carousel owl-loaded slider">
 		<div class="owl-stage-outer">
@@ -46,18 +49,22 @@
 		</div>
 	</div>
 
+	<!-- Валидация -->
+
 	<form action="#" class="form" id="form">
 		<div class="form__field">
 			<input class="input__group" name="name" type="text" placeholder="Имя" />
 		</div>
 		<div class="form__field">
-			<input class="input__group left" name="email" type="email" placeholder="E-Mail" required/>
+			<input class="input__group left" name="email" type="email" placeholder="E-Mail" required />
 		</div>
 		<div class="form__field">
-			<input class="input__group" name="tel" type="tel" placeholder="Телефон" id="phone" pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" />
+			<input class="input__group" name="tel" type="tel" placeholder="Телефон" id="phone"
+				pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" />
 		</div>
 		<div class="form__field">
-			<input class="input__group" name="number" type="number" id="growth" placeholder="Ваш рост (см)" min="50" max="250" />
+			<input class="input__group" name="number" type="number" id="growth" placeholder="Ваш рост (см)" min="50"
+				max="250" />
 		</div>
 		<div class="form__field">
 			<input class="input__group" name="password" type="password" id="password" placeholder="Пароль" minlength="6" />
@@ -74,12 +81,18 @@
 		<button type="submit">Отправить</button>
 	</form>
 
+	<!-- Яндекс API -->
+
+	<div id="map" class="map"></div>
+
 	<!-- Custom HTML END -->
 
 	<script src="js/jquery.min.js"></script>
 	<script src="libs/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
 	<script src="libs/jQuery-Mask-Plugin-master/dist/jquery.mask.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.js"></script>
+	<script src="https://api-maps.yandex.ru/2.1/?apikey=06fdea1b-8449-48df-95f6-be651bb4ca2c&lang=ru_RU"
+		type="text/javascript"></script>
 	<script src="js/scripts.min.js"></script>
 </body>
 
